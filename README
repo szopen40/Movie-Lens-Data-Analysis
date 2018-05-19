@@ -2,3 +2,21 @@ Movie Lens problem solved by Hadoop - MapReduce
 
 KPI. 
 Top20 rated movies (Condition: The movie should be rated/viewed by at least 40 users)
+
+Technological stack:
+-Java
+-MapReduce
+
+Task is splitted between two jobs:
+
+First job:
+-SortingMapper
+-Rating Mapper
+Merged data from both Mappers goes to:
+-MyReducer
+
+Second job:
+Output from MyReducer goes to:
+-SortingMapper
+Final output from:
+-SortingReducer
